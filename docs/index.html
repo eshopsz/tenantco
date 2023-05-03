@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Front</title>
+
+    <meta name="description" content="Tenent Co - Find Your Home">
+    <meta name="keywords" content="real estate, property, homes, location, apartments, rental, bedsitters, lease, house for sale">
+    <meta name="author" content="Andy Creative Studio">
+
+    <base href="/tenantco">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo/1675155660021.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/logo/1675155660021.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/1675155660021.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/1675155660021.png">
+
+    <!--<link rel="manifest" href="site.webmanifest">-->
+
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript">
+        function onVisaCheckoutReady() {
+            V.init({
+                    apikey: "AUSR3NC9GJO845735CP821meezsKGfwFDK3uhYsT4O61Ig5B4",
+                    encryptionKey: "28WWD43SW7H9S28C7OJQ13dsGwsZzjy7_30dGHhhjNWmR367Q",
+                    paymentRequest: {
+                        currencyCode: "ZAR",
+                        subtotal: "50.00"
+                    }
+                }),
+                V.on("payment.success", function(payment) {
+                    document.write("payment.success: \n" + JSON.stringify(payment));
+                });
+            V.on("payment.cancel", function(payment) {
+                document.write("payment.cancel: \n" + JSON.stringify(payment));
+            });
+            V.on("payment.error", function(payment, error) {
+                document.write("payment.error: \n" +
+                    JSON.stringify(payment) + "\n" +
+                    JSON.stringify(error));
+            });
+        }
+    </script>
+
+<style>@import"https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap";:root{--fi-blue:#0d6efd;--fi-indigo:#6610f2;--fi-purple:#6f42c1;--fi-pink:#d63384;--fi-red:#dc3545;--fi-orange:#fd7e14;--fi-yellow:#ffc107;--fi-green:#198754;--fi-teal:#20c997;--fi-cyan:#0dcaf0;--fi-black:#000;--fi-white:#fff;--fi-gray:#9691a4;--fi-gray-dark:#454056;--fi-gray-100:#f9f8fa;--fi-gray-200:#f5f4f8;--fi-gray-300:#efecf3;--fi-gray-400:#d5d2dc;--fi-gray-500:#bbb7c5;--fi-gray-600:#9691a4;--fi-gray-700:#666276;--fi-gray-800:#454056;--fi-gray-900:#1f1b2d;--fi-primary:rgb(129, 189, 2);--fi-accent:#5d3cf2;--fi-secondary:#f5f4f8;--fi-success:#07c98b;--fi-info:#3c76f2;--fi-warning:#fdbc31;--fi-danger:#f23c49;--fi-light:#fff;--fi-dark:#1f1b2d;--fi-primary-rgb:253, 86, 49;--fi-accent-rgb:93, 60, 242;--fi-secondary-rgb:245, 244, 248;--fi-success-rgb:7, 201, 139;--fi-info-rgb:60, 118, 242;--fi-warning-rgb:253, 188, 49;--fi-danger-rgb:242, 60, 73;--fi-light-rgb:255, 255, 255;--fi-dark-rgb:31, 27, 45;--fi-white-rgb:255, 255, 255;--fi-black-rgb:0, 0, 0;--fi-body-color-rgb:102, 98, 118;--fi-body-bg-rgb:255, 255, 255;--fi-font-sans-serif:"Noto Sans", sans-serif;--fi-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--fi-gradient:linear-gradient(26.21deg, #5d3cf2 0%, rgb(129, 189, 2) 108.88%);--fi-body-font-family:var(--fi-font-sans-serif);--fi-body-font-size:1rem;--fi-body-font-weight:400;--fi-body-line-height:1.5;--fi-body-color:#666276;--fi-body-bg:#fff;--fi-border-width:1px;--fi-border-style:solid;--fi-border-color:#efecf3;--fi-border-color-translucent:rgba(0, 0, 0, .175);--fi-border-radius:.5rem;--fi-border-radius-sm:.375rem;--fi-border-radius-lg:.75rem;--fi-border-radius-xl:1.875rem;--fi-border-radius-2xl:2rem;--fi-border-radius-pill:50rem;--fi-link-color:rgb(129, 189, 2);--fi-link-hover-color:#fd3509;--fi-code-color:#e3116c;--fi-highlight-bg:#fff3cd}*,*:before,*:after{box-sizing:border-box}html *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}html,body{height:100%}body{display:flex;flex-direction:column}</style><link rel="stylesheet" href="styles.f973136d25079a0d.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.f973136d25079a0d.css"></noscript></head>
+
+<body>
+
+    <app-root></app-root>
+
+<script src="runtime.c5d548e442b2b6b8.js" type="module"></script><script src="polyfills.ca3e8e6dd5e021a2.js" type="module"></script><script src="scripts.706679f88a15d1cc.js" defer></script><script src="main.4ce0fb2ef7e75979.js" type="module"></script>
+
+</body></html>
