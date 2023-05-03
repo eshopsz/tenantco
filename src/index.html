@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Front</title>
+
+    <meta name="description" content="Tenent Co - Find Your Home">
+    <meta name="keywords" content="real estate, property, homes, location, apartments, rental, bedsitters, lease, house for sale">
+    <meta name="author" content="Andy Creative Studio">
+
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo/1675155660021.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/logo/1675155660021.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/1675155660021.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/1675155660021.png">
+
+    <!--<link rel="manifest" href="site.webmanifest">-->
+
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript">
+        function onVisaCheckoutReady() {
+            V.init({
+                    apikey: "AUSR3NC9GJO845735CP821meezsKGfwFDK3uhYsT4O61Ig5B4",
+                    encryptionKey: "28WWD43SW7H9S28C7OJQ13dsGwsZzjy7_30dGHhhjNWmR367Q",
+                    paymentRequest: {
+                        currencyCode: "ZAR",
+                        subtotal: "50.00"
+                    }
+                }),
+                V.on("payment.success", function(payment) {
+                    document.write("payment.success: \n" + JSON.stringify(payment));
+                });
+            V.on("payment.cancel", function(payment) {
+                document.write("payment.cancel: \n" + JSON.stringify(payment));
+            });
+            V.on("payment.error", function(payment, error) {
+                document.write("payment.error: \n" +
+                    JSON.stringify(payment) + "\n" +
+                    JSON.stringify(error));
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <app-root></app-root>
+
+</body>
+
+</html>

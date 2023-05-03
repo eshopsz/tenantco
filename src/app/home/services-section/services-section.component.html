@@ -1,0 +1,41 @@
+<section class="container mb-5 mt-n3 mt-lg-0">
+    <div class="tns-carousel-wrapper tns-nav-outside tns-nav-outside-flush mx-n2">
+        <div class="tns-carousel-inner row gx-4 mx-0 py-3">
+            <div class="col">
+                <div class="card card-hover border-0 h-100 pb-2 pb-sm-3 px-sm-3 text-center"><img class="d-block mx-auto my-3" src="../../../assets/img/real-estate/illustrations/buy.svg" width="256" alt="Illustration">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Buy a property</h2>
+                        <p class="card-text fs-sm">Looking to buy property or a home, check out our great listings.</p>
+                    </div>
+                    <div class="card-footer pt-0 border-0">
+                        <a class="btn btn-outline-primary stretched-link" [routerLink]="['/catalog']" [queryParams]="{category: 'Sale'}">Find a home</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-hover border-0 h-100 pb-2 pb-sm-3 px-sm-3 text-center"><img class="d-block mx-auto my-3" src="../../../assets/img/real-estate/illustrations/sell.svg" width="256" alt="Illustration">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Sell a property</h2>
+                        <p class="card-text fs-sm">Have a property you wish to showcase? Go ahead and get it listed with us.</p>
+                    </div>
+                    <div class="card-footer pt-0 border-0">
+                        <a *ngIf="!authed" class="btn btn-outline-primary stretched-link" href="#signin-modal" data-bs-toggle="modal">Place an ad</a>
+
+                        <a *ngIf="authed" class="btn btn-outline-primary stretched-link" [routerLink]="['/catalog/new']">Place an ad</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-hover border-0 h-100 pb-2 pb-sm-3 px-sm-3 text-center">
+                    <img class="d-block mx-auto my-3" src="../../../assets/img/real-estate/illustrations/rent.svg" width="256" alt="Illustration">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Rent a property</h2>
+                        <p class="card-text fs-sm">Looking to place to rent? Check out our rental listings..</p>
+                    </div>
+                    <div class="card-footer pt-0 border-0">
+                        <a class="btn btn-outline-primary stretched-link" [routerLink]="['/catalog']" [queryParams]="{category: 'Rental'}">Find a rental</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

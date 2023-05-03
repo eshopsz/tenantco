@@ -1,0 +1,65 @@
+<div class="container pt-5 pb-lg-4 mt-5 mb-sm-2">
+    <!-- Breadcrumb-->
+    <nav class="mb-4 pt-md-3" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Account</li>
+        </ol>
+    </nav>
+    <!-- Page content-->
+    <div class="row">
+        <!-- Sidebar-->
+        <aside class="col-lg-4 col-md-5 pe-xl-4 mb-5">
+            <!-- Account nav-->
+            <app-account-nav></app-account-nav>
+        </aside>
+
+        <div class="col-lg-8 col-md-7 mb-5">
+            <h1 class="h2">Password &amp; Security</h1>
+            <p class="pt-1">Manage your password settings and secure your account.</p>
+            <h2 class="h5">Password</h2>
+            <div class="needs-validation pb-4" novalidate="">
+                <div class="row align-items-end mb-2">
+                    <div class="col-sm-6 mb-2">
+                        <label class="form-label" for="account-password">Current password</label>
+                        <div class="password-toggle">
+                            <input #opassModel="ngModel" [(ngModel)]="old_password" class="form-control" type="password" id="account-password" required="" minlength="8">
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                  </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-2"><a class="d-inline-block mb-2" href="#">Forgot password?</a></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="account-password-new">New password</label>
+                        <div class="password-toggle">
+                            <input #npassModel="ngModel" [(ngModel)]="new_password" class="form-control" type="password" id="account-password-new" required="" minlength="8">
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                  </label>
+                        </div>
+                        <div class="form-text" id="passwordHelpBlock">
+                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="account-password-confirm">Confirm password</label>
+                        <div class="password-toggle">
+                            <input #cpassModel="ngModel" [(ngModel)]="c_password" class="form-control" type="password" id="account-password-confirm" required="">
+                            <label class="password-toggle-btn" aria-label="Show/hide password">
+                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                  </label>
+                        </div>
+                    </div>
+                </div>
+                <button *ngIf="!submitted" [disabled]="opassModel.invalid || npassModel.invalid || c_password != new_password" (click)="changePass()" class="btn btn-outline-primary" type="submit">Update password</button>
+                <button *ngIf="submitted" type="button" class="btn btn-primary px-3 px-sm-4" disabled>
+                  <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                  Updating...
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

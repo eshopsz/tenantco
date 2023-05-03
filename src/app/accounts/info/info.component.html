@@ -1,0 +1,100 @@
+<div class="container pt-5 pb-lg-4 mt-5 mb-sm-2">
+    <!-- Breadcrumb-->
+    <nav class="mb-4 pt-md-3" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Account</li>
+        </ol>
+    </nav>
+    <!-- Page content-->
+    <div class="row">
+        <!-- Sidebar-->
+        <aside class="col-lg-4 col-md-5 pe-xl-4 mb-5">
+            <!-- Account nav-->
+            <app-account-nav></app-account-nav>
+        </aside>
+
+        <!-- Content-->
+        <div class="col-lg-8 col-md-7 mb-5">
+            <h1 class="h2">Personal Info</h1>
+            <div class="border rounded-3 p-3 mb-4" id="personal-info">
+                <!-- Name-->
+                <div class="col-lg-12 col-sm-4 mb-4">
+                    <div class="filepond--root file-uploader bg-secondary filepond--hopper" data-style-panel-layout="compact" data-style-button-remove-item-position="left" data-style-button-process-item-position="right" data-style-load-indicator-position="right" data-style-progress-indicator-position="right"
+                        data-style-button-remove-item-align="false" style="height: 160px;"><input (change)="updatepp($event)" class="filepond--browser" type="file" id="filepond--browser-e1sifgd2h" name="filepond" aria-controls="filepond--assistant-e1sifgd2h" aria-labelledby="filepond--drop-label-e1sifgd2h" accept="image/png,image/jpeg">
+                        <a
+                            class="filepond--credits" aria-hidden="true" href="https://pqina.nl/" target="_blank" rel="noopener noreferrer" style="transform: translateY(152px);">Powered by PQINA</a>
+                            <div class="filepond--drop-label" style="transform: translate3d(0px, 0px, 0px); opacity: 1;"><label for="filepond--browser-e1sifgd2h" id="filepond--drop-label-e1sifgd2h" aria-hidden="true"><i class="d-inline-block fi-camera-plus fs-2 text-muted mb-2"></i><br><span class="fw-bold">Change profile picture</span></label></div>
+                            <div class="filepond--list-scroller" style="transform: translate3d(0px, 0px, 0px);">
+                                <ul class="filepond--list" role="list"></ul>
+                            </div>
+                            <div class="filepond--panel filepond--panel-root" data-scalable="true">
+                                <div class="filepond--panel-top filepond--panel-root"></div>
+                                <div class="filepond--panel-center filepond--panel-root" style="transform: translate3d(0px, 8px, 0px) scale3d(1, 1.44, 1);"></div>
+                                <div class="filepond--panel-bottom filepond--panel-root" style="transform: translate3d(0px, 152px, 0px);"></div>
+                            </div><span class="filepond--assistant" id="filepond--assistant-e1sifgd2h" role="status" aria-live="polite" aria-relevant="additions"></span>
+                            <div class="filepond--drip"></div>
+                            <fieldset class="filepond--data"></fieldset>
+                    </div>
+                </div>
+
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="pe-2">
+                            <label class="form-label fw-bold">First name</label>
+                            <div id="name-value">{{account.first_name}}</div>
+                        </div>
+                        <div class="me-n3" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"><a class="nav-link py-0" href="#name-collapse" data-bs-toggle="collapse"><i class="fi-edit"></i></a></div>
+                    </div>
+                    <div class="collapse" id="name-collapse" data-bs-parent="#personal-info">
+                        <input [(ngModel)]="name" class="form-control mt-3" type="text" data-bs-binded-element="#name-value">
+                    </div>
+                </div>
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="pe-2">
+                            <label class="form-label fw-bold">Last name</label>
+                            <div id="name-value">{{account.last_name}}</div>
+                        </div>
+                        <div class="me-n3" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"><a class="nav-link py-0" href="#surname-collapse" data-bs-toggle="collapse"><i class="fi-edit"></i></a></div>
+                    </div>
+                    <div class="collapse" id="surname-collapse" data-bs-parent="#personal-info">
+                        <input [(ngModel)]="surname" class="form-control mt-3" type="text" data-bs-binded-element="#surname-value">
+                    </div>
+                </div>
+                <!-- Email-->
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="pe-2">
+                            <label class="form-label fw-bold">Email</label>
+                            <div id="email-value">{{email}}</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Phone number-->
+                <div class="border-bottom pb-3 mb-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="pe-2">
+                            <label class="form-label fw-bold">Phone number</label>
+                            <div id="phone-value">{{account.phone}}</div>
+                        </div>
+                        <div class="me-n3" data-bs-toggle="tooltip" aria-label="Edit" data-bs-original-title="Edit"><a class="nav-link py-0" href="#phone-collapse" data-bs-toggle="collapse"><i class="fi-edit"></i></a></div>
+                    </div>
+                    <div class="collapse" id="phone-collapse" data-bs-parent="#personal-info">
+                        <input [(ngModel)]="phone" class="form-control mt-3" type="text" data-bs-binded-element="#phone-value" data-bs-unset-value="Not specified" value="(302) 555-0107">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between border-top mt-4 pt-4 pb-1">
+                <button *ngIf="!submitted" (click)="submitDetails()" class="btn btn-primary px-3 px-sm-4" type="button">Save changes</button>
+                <button *ngIf="submitted" type="button" class="btn btn-primary px-3 px-sm-4" disabled>
+                  <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                  Updating...
+                </button>
+                <button class="btn btn-link btn-sm px-0 d-none" type="button"><i class="fi-trash me-2"></i>Delete account</button>
+            </div>
+        </div>
+    </div>
+</div>

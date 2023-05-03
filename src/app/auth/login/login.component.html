@@ -1,0 +1,28 @@
+<div class="needs-validation" novalidate="">
+    <div class="mb-4">
+        <label class="form-label mb-2" for="signin-email">Email address</label>
+        <input #emailModel="ngModel" [(ngModel)]="email" class="form-control" type="email" id="signin-email" placeholder="Enter your email" required="">
+        <div class="form-text" *ngIf="emailModel.touched && emailModel.invalid">
+            Cannot leave field empty.
+        </div>
+    </div>
+    <div class="mb-4">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <label class="form-label mb-0" for="signin-password">Password</label><a class="fs-sm" href="#">Forgot password?</a>
+        </div>
+        <div class="password-toggle">
+            <input #passwordModel="ngModel" [(ngModel)]="password" class="form-control" type="password" id="signin-password" placeholder="Enter password" minlength="8" required="">
+            <label class="password-toggle-btn" aria-label="Show/hide password">
+              <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+            </label>
+            <div class="form-text" *ngIf="passwordModel.touched && passwordModel.invalid">
+                Cannot leave field empty.
+            </div>
+        </div>
+    </div>
+    <button *ngIf="!submitted" (click)="login()" [disabled]="emailModel.invalid || passwordModel.invalid" class="btn btn-primary btn-lg w-100" type="submit">Sign in</button>
+    <button *ngIf="submitted" type="button" class="btn btn-primary btn-lg w-100" disabled>
+      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
+</div>

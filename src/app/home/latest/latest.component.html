@@ -1,0 +1,65 @@
+<section class="container pb-4 pt-1 mb-5">
+    <div class="d-flex align-items-end align-items-lg-center justify-content-between mb-4 pb-md-2">
+        <div class="d-flex w-100 align-items-center justify-content-between justify-content-lg-start">
+            <h2 class="h3 mb-0 me-md-4">Latest Listings</h2>
+        </div>
+        <a class="btn btn-link fw-normal d-none d-lg-block p-0" [routerLink]="['/catelog']">View all<i class="fi-arrow-long-right ms-2"></i></a>
+    </div>
+    <div class="row g-4">
+
+        <div *ngIf="estates[0]" class="col-md-6">
+            <div class="card bg-size-cover bg-position-center border-0 overflow-hidden h-100" style="background-image: url(http://127.0.0.1:8000{{estates[0].images[0].image}});"><span class="img-gradient-overlay"></span>
+                <div class="card-body content-overlay pb-0">
+                    <div class="d-flex">
+                        <span class="badge bg-info fs-sm">New</span>
+                    </div>
+                </div>
+                <div class="card-footer content-overlay border-0 pt-0 pb-4">
+                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
+                        <a class="text-decoration-none text-light pe-2" [routerLink]="['/catalog/estate', estates[0].id]">
+                            <div class="fs-sm text-uppercase pt-2 mb-1">{{estates[0].category.category}}</div>
+                            <h3 class="h5 text-light mb-1">{{estates[0].title}}</h3>
+                            <div class="fs-sm opacity-70"><i class="fi-map-pin me-1"></i>{{estates[0].province.province}}, {{estates[0].city}}</div>
+                        </a>
+                        <div class="btn-group ms-n2 ms-sm-0 mt-3"><a class="btn btn-primary px-3" [routerLink]="['/catalog/estate', estates[0].id]" style="height: 2.75rem;">From R{{estates[0].price}}</a>
+                            <button class="d-none btn btn-primary btn-icon border-end-0 border-top-0 border-bottom-0 border-light fs-sm" type="button"><i class="fi-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="estates[1]" class="col-md-6">
+            <div class="card bg-size-cover bg-position-center border-0 overflow-hidden mb-4" style="background-image: url(http://127.0.0.1:8000{{estates[1].images[0].image}});"><span class="img-gradient-overlay"></span>
+                <div class="card-body content-overlay pb-0"><span class="badge bg-info fs-sm">New</span></div>
+                <div class="card-footer content-overlay border-0 pt-0 pb-4">
+                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
+                        <a class="text-decoration-none text-light pe-2" [routerLink]="['/catalog/estate', estates[1].id]">
+                            <div class="fs-sm text-uppercase pt-2 mb-1">{{estates[1].category.category}}</div>
+                            <h3 class="h5 text-light mb-1">{{estates[1].title}}</h3>
+                            <div class="fs-sm opacity-70"><i class="fi-map-pin me-1"></i>{{estates[1].province.province}}, {{estates[1].city}}</div>
+                        </a>
+                        <div class="btn-group ms-n2 ms-sm-0 mt-3"><a class="btn btn-primary px-3" [routerLink]="['/catalog/estate', estates[1].id]" style="height: 2.75rem;">R{{estates[1].price}}</a>
+                            <button class="d-none btn btn-primary btn-icon border-end-0 border-top-0 border-bottom-0 border-light fs-sm" type="button"><i class="fi-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="estates[2]" class="card bg-size-cover bg-position-center border-0 overflow-hidden" style="background-image: url(http://127.0.0.1:8000{{estates[2].images[0].image}});"><span class="img-gradient-overlay"></span>
+                <div class="card-body content-overlay pb-0"><span class="badge bg-info fs-sm">New</span></div>
+                <div class="card-footer content-overlay border-0 pt-0 pb-4">
+                    <div class="d-sm-flex justify-content-between align-items-end pt-5 mt-2 mt-sm-5">
+                        <a class="text-decoration-none text-light pe-2" [routerLink]="['/catalog/estate', estates[2].id]">
+                            <div class="fs-sm text-uppercase pt-2 mb-1">{{estates[2].category.category}}</div>
+                            <h3 class="h5 text-light mb-1">{{estates[2].title}}</h3>
+                            <div class="fs-sm opacity-70"><i class="fi-map-pin me-1"></i>{{estates[2].province.province}}, {{estates[2].city}}</div>
+                        </a>
+                        <div class="btn-group ms-n2 ms-sm-0 mt-3"><a class="btn btn-primary px-3" [routerLink]="['/catalog/estate', estates[2].id]" style="height: 2.75rem;">R{{estates[1].price}}</a>
+                            <button class="d-none btn btn-primary btn-icon border-end-0 border-top-0 border-bottom-0 border-light fs-sm" type="button"><i class="fi-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

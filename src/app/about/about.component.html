@@ -1,0 +1,90 @@
+<div class="container mt-5 mb-md-4 pt-5">
+    <nav class="mb-3 pt-md-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="container mb-5 pb-2">
+    <div class="row align-items-center justify-content-center">
+        <!-- Hero content-->
+        <div class="col-lg-4 col-md-5 col-sm-9 order-md-1 order-2 text-md-start text-center">
+            <h1 class="mb-4">About Tenant Co</h1>
+            <p class="mb-4 pb-3 fs-lg">
+                We offer a wide range of housing solutions available for rent and for purchase. What ever your budget is, we help perspective clients find accomodation of their liking.
+            </p>
+        </div>
+        <!-- Hero carousel-->
+        <div class="col-lg-7 col-md-6 offset-md-1 col-12 order-md-2 order-1">
+            <div class="tns-carousel-wrapper tns-controls-static tns-nav-outside">
+                <div class="tns-outer" id="tns1-ow">
+                    <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0">
+                        <button class="prev-btn" type="button" data-controls="prev" tabindex="-1" aria-controls="tns1"><i class="fi-chevron-left"></i></button>
+                        <button class="next-btn" type="button" data-controls="next" tabindex="-1" aria-controls="tns1"><i class="fi-chevron-right"></i></button>
+                    </div>
+                    <div id="tns1-mw" class="tns-ovh">
+                        <div class="tns-inner" id="tns1-iw">
+                            <div class="tns-carousel-inner  tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" data-carousel-options="{&quot;loop&quot;: true, &quot;gutter&quot;: 16}" id="tns1" style="transform: translate3d(-16.6667%, 0px, 0px);">
+                                <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="../../assets/img/real-estate/about/hero/01.jpg" alt="Carousel image"></div>
+                                <div class="tns-item tns-slide-cloned tns-slide-active"><img class="rounded-3" src="../../assets/img/real-estate/about/hero/02.jpg" alt="Carousel image"></div>
+                                <div class="tns-item" id="tns1-item0" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="../../assets/img/real-estate/about/hero/01.jpg" alt="Carousel image"></div>
+                                <div class="tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="../../assets/img/real-estate/about/hero/02.jpg" alt="Carousel image"></div>
+                                <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="../../assets/img/real-estate/about/hero/01.jpg" alt="Carousel image"></div>
+                                <div class="tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="../../assets/img/real-estate/about/hero/02.jpg" alt="Carousel image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
+    <h2 class="h3 mb-4">Contact Us</h2>
+    <div class="row g-4">
+        <!-- Item-->
+        <div class="col-md-4">
+            <a class="icon-box card card-hover h-100" href="mailto:malambuletrading@gmail.com">
+                <div class="card-body">
+                    <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-mail"></i></div><span class="d-block mb-1 text-body">Drop us a line</span>
+                    <h3 class="h4 icon-box-title mb-0 opacity-90">malambuletrading@gmail.com</h3>
+                </div>
+            </a>
+        </div>
+        <!-- Item-->
+        <div class="col-md-4">
+            <a class="icon-box card card-hover h-100" href="tel:+27722595345">
+                <div class="card-body">
+                    <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-whatsapp"></i></div><span class="d-block mb-1 text-body">Text us any time</span>
+                    <h3 class="h4 icon-box-title mb-0 opacity-90">+27 72 259 5345</h3>
+                </div>
+            </a>
+        </div>
+        <!-- Item-->
+        <div class="col-md-4">
+            <a class="icon-box card card-hover h-100" href="https://instagram.com/tenant.co">
+                <div class="card-body">
+                    <div class="icon-box-media text-primary rounded-circle shadow-sm mb-3"><i class="fi-instagram"></i></div><span class="d-block mb-1 text-body">Follow us</span>
+                    <h3 class="h4 icon-box-title mb-0 opacity-90">@tenant.co</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5 pb-sm-3 pb-lg-4">
+    <div class="bg-secondary rounded-3">
+        <div class="col-md-11 col-12 offset-md-1 p-md-0 p-2 d-flex align-items-center justify-content-between">
+            <div class="me-md-5 py-md-5 px-md-0 p-4" style="max-width: 526px;">
+                <h2 class="mb-md-4">
+                    Buy property with confidence. <br> Sell without pressure. <br> Rental without problems.
+                </h2>
+                <p class="mb-4 pb-md-3 fs-lg">Let us help your find your next home and property or sell it without a makor hassle.</p><a class="btn btn-lg btn-primary" [routerLink]="['/catelog']" [queryParams]="{category: 'Rental'}"><i class="fi-search me-2"></i>Find property</a>
+            </div>
+            <div class="col-4 d-md-block d-none align-self-end px-0"><img class="mt-n5" src="../../assets/img/real-estate/about/01.png" width="406" alt="Cover image"></div>
+        </div>
+    </div>
+</section>

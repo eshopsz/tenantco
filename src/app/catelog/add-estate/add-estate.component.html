@@ -1,0 +1,280 @@
+<div class="container mt-5 mb-md-4 py-5">
+    <div class="row">
+        <!-- Page content-->
+        <div class="col-lg-8">
+            <!-- Breadcrumb-->
+            <nav class="mb-3 pt-md-3" aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a [routerLink]="['home']">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Add property</li>
+                </ol>
+            </nav>
+            <!-- Title-->
+            <div class="mb-4">
+                <h1 class="h2 mb-0">Add property</h1>
+            </div>
+
+            <!-- Basic info-->
+            <section class="card card-body border-0 shadow-sm p-4 mb-4" id="basic-info">
+                <h2 class="h4 mb-4"><i class="fi-info-circle text-primary fs-5 mt-n1 me-2"></i>Basic info</h2>
+                <div class="mb-3">
+                    <label class="form-label" for="ap-title">Title <span class="text-danger">*</span></label>
+                    <input #nameModel="ngModel" [(ngModel)]="name" class="form-control" type="text" id="ap-title" placeholder="Title for your property" required="">
+                    <span *ngIf="nameModel.touched && nameModel.invalid" class="form-text text-primary">Field cannot be left empty</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-category">Category <span class="text-danger">*</span></label>
+                        <select #categoryModel="ngModel" [(ngModel)]="category" class="form-select" id="ap-category" required="">
+                        <option *ngFor="let category of categories" value="{{category.id}}">{{category.category}}</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-type">Property type <span class="text-danger">*</span></label>
+                        <select #typeModel="ngModel" [(ngModel)]="type" class="form-select" id="ap-type" required="">
+            <option *ngFor="let type of types" value="{{type.id}}">{{type.type}}</option>
+          </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location-->
+            <section class="card card-body border-0 shadow-sm p-4 mb-4" id="location">
+                <h2 class="h4 mb-4"><i class="fi-map-pin text-primary fs-5 mt-n1 me-2"></i>Location</h2>
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-province">Province <span class="text-danger">*</span></label>
+                        <select #provinceModel="ngModel" [(ngModel)]="province" class="form-select" id="ap-province" required="">
+                        <option *ngFor="let province of provinces" value="{{province.id}}">{{province.province}}</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-city">City <span class="text-danger">*</span></label>
+                        <input #cityModel="ngModel" [(ngModel)]="city" class="form-control" type="text" id="ap-city" value="{{city}}" required="">
+                        <span *ngIf="cityModel.touched && cityModel.invalid" class="form-text text-primary">Field cannot be left empty</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-address">Street address <span class="text-danger">*</span></label>
+                        <input #streetModel="ngModel" [(ngModel)]="street" class="form-control" type="text" id="ap-address" value="{{street}}" required="">
+                        <span *ngIf="streetModel.touched && streetModel.invalid" class="form-text text-primary">Field cannot be left empty</span>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-zip">Zip code  <span class="text-danger">*</span></label>
+                        <input #codeModel="ngModel" [(ngModel)]="code" class="form-control" type="text" id="ap-zip" placeholder="Enter Zip code" value="{{code}}" required="">
+                        <span *ngIf="codeModel.touched && codeModel.invalid" class="form-text text-primary">Field cannot be left empty</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Property details-->
+            <section class="card card-body border-0 shadow-sm p-4 mb-4" id="details">
+                <h2 class="h4 mb-4"><i class="fi-edit text-primary fs-5 mt-n1 me-2"></i>Property details</h2>
+                <div class="row mb-4">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-bedrooms">Bedrooms <span class="text-danger">*</span></label>
+                        <select #bedroomsModel="ngModel" [(ngModel)]="bedrooms" class="form-select" id="ap-bedrooms" required="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-bathrooms">Bathroom <span class="text-danger">*</span></label>
+                        <select #bathroomsModel="ngModel" [(ngModel)]="bathrooms" class="form-select" id="ap-bathrooms" required="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-sm-6 mb-3">
+                        <label class="form-label" for="ap-parking">Parking Spots <span class="text-danger">*</span></label>
+                        <select #parkingModel="ngModel" [(ngModel)]="parking" class="form-select" id="ap-parking" required="">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label d-block fw-bold mb-2 pb-1">Extras</label>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div *ngIf="extras[0]" class="form-check">
+                                <input (change)="onCheck($event, extras[0].id)" class="form-check-input" type="checkbox" id="{{extras[0].extra}}">
+                                <label class="form-check-label" for="{{extras[0].extra}}">{{extras[0].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[1]" class="form-check">
+                                <input (change)="onCheck($event, extras[1].id)" class="form-check-input" type="checkbox" id="{{extras[1].extra}}">
+                                <label class="form-check-label" for="{{extras[1].extra}}">{{extras[1].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[2]" class="form-check">
+                                <input (change)="onCheck($event, extras[2].id)" class="form-check-input" type="checkbox" id="{{extras[2].extra}}">
+                                <label class="form-check-label" for="{{extras[2].extra}}">{{extras[2].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[3]" class="form-check">
+                                <input (change)="onCheck($event, extras[3].id)" class="form-check-input" type="checkbox" id="{{extras[3].extra}}">
+                                <label class="form-check-label" for="{{extras[3].extra}}">{{extras[3].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[4]" class="form-check">
+                                <input (change)="onCheck($event, extras[4].id)" class="form-check-input" type="checkbox" id="{{extras[4].extra}}">
+                                <label class="form-check-label" for="{{extras[4].extra}}">{{extras[4].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[5]" class="form-check">
+                                <input (change)="onCheck($event, extras[5].id)" class="form-check-input" type="checkbox" id="{{extras[5].extra}}">
+                                <label class="form-check-label" for="{{extras[5].extra}}">{{extras[5].extra}}</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div *ngIf="extras[6]" class="form-check">
+                                <input (change)="onCheck($event, extras[6].id)" class="form-check-input" type="checkbox" id="{{extras[6].extra}}">
+                                <label class="form-check-label" for="{{extras[6].extra}}">{{extras[6].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[7]" class="form-check">
+                                <input (change)="onCheck($event, extras[7].id)" class="form-check-input" type="checkbox" id="{{extras[7].extra}}">
+                                <label class="form-check-label" for="{{extras[7].extra}}">{{extras[7].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[8]" class="form-check">
+                                <input (change)="onCheck($event, extras[8].id)" class="form-check-input" type="checkbox" id="{{extras[8].extra}}">
+                                <label class="form-check-label" for="{{extras[8].extra}}">{{extras[8].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[9]" class="form-check">
+                                <input (change)="onCheck($event, extras[9].id)" class="form-check-input" type="checkbox" id="{{extras[9].extra}}">
+                                <label class="form-check-label" for="{{extras[9].extra}}">{{extras[9].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[10]" class="form-check">
+                                <input (change)="onCheck($event, extras[10].id)" class="form-check-input" type="checkbox" id="{{extras[10].extra}}">
+                                <label class="form-check-label" for="{{extras[10].extra}}">{{extras[10].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[11]" class="form-check">
+                                <input (change)="onCheck($event, extras[11].id)" class="form-check-input" type="checkbox" id="{{extras[11].extra}}">
+                                <label class="form-check-label" for="{{extras[11].extra}}">{{extras[11].extra}}</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div *ngIf="extras[12]" class="form-check">
+                                <input (change)="onCheck($event, extras[12].id)" class="form-check-input" type="checkbox" id="{{extras[12].extra}}">
+                                <label class="form-check-label" for="{{extras[12].extra}}">{{extras[12].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[13]" class="form-check">
+                                <input (change)="onCheck($event, extras[13].id)" class="form-check-input" type="checkbox" id="{{extras[13].extra}}">
+                                <label class="form-check-label" for="{{extras[13].extra}}">{{extras[13].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[14]" class="form-check">
+                                <input (change)="onCheck($event, extras[14].id)" class="form-check-input" type="checkbox" id="{{extras[14].extra}}">
+                                <label class="form-check-label" for="{{extras[14].extra}}">{{extras[14].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[15]" class="form-check">
+                                <input (change)="onCheck($event, extras[15].id)" class="form-check-input" type="checkbox" id="{{extras[15].extra}}">
+                                <label class="form-check-label" for="{{extras[15].extra}}">{{extras[15].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[16]" class="form-check">
+                                <input (change)="onCheck($event, extras[16].id)" class="form-check-input" type="checkbox" id="{{extras[16].extra}}">
+                                <label class="form-check-label" for="{{extras[16].extra}}">{{extras[16].extra}}</label>
+                            </div>
+                            <div *ngIf="extras[17]" class="form-check">
+                                <input (change)="onCheck($event, extras[17].id)" class="form-check-input" type="checkbox" id="{{extras[17].extra}}">
+                                <label class="form-check-label" for="{{extras[17].extra}}">{{extras[17].extra}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label class="form-label" for="ap-description">Description </label>
+                <textarea #descriptionModel="ngModel" [(ngModel)]="description" class="form-control" id="ap-description" rows="5" placeholder="Describe your property" required=""></textarea>
+                <span *ngIf="descriptionModel.touched && descriptionModel.invalid" class="form-text text-primary">Field cannot be left empty</span>
+            </section>
+            <!-- Price-->
+            <section class="card card-body border-0 shadow-sm p-4 mb-4" id="price">
+                <h2 class="h4 mb-4"><i class="fi-cash text-primary fs-5 mt-n1 me-2"></i>Price</h2>
+                <label class="form-label" for="ap-price">Price <span class="text-danger">*</span></label>
+                <div class="d-sm-flex">
+                    <select class="form-select w-25 me-2 mb-2">
+                    <option value="zar">R</option>
+                  </select>
+
+                    <input #priceModel="ngModel" [(ngModel)]="price" class="form-control w-100 me-2 mb-2" type="number" id="ap-price" required="">
+
+                    <select class="form-select w-50 mb-2">
+                      <option value="month" selected="">per month</option>
+                    </select>
+                </div>
+                <span *ngIf="priceModel.touched && priceModel.invalid" class="form-text text-primary">Field cannot be left empty</span>
+            </section>
+            <!-- Photos / video-->
+            <section class="card card-body border-0 shadow-sm p-4 mb-4" id="photos">
+                <h2 class="h4 mb-4"><i class="fi-image text-primary fs-5 mt-n1 me-2"></i>Photos / video</h2>
+                <div class="alert alert-info mb-4" role="alert">
+                    <div class="d-flex"><i class="fi-alert-circle me-2 me-sm-3"></i>
+                        <p class="fs-sm mb-1">The maximum photo size is 8 MB. Formats: jpeg, jpg, png. Put the main picture first.</p>
+                    </div>
+                </div>
+
+                <div class="filepond--root file-uploader file-uploader-grid filepond--hopper" data-style-button-remove-item-position="left" data-style-button-process-item-position="right" data-style-load-indicator-position="right" data-style-progress-indicator-position="right"
+                    data-style-button-remove-item-align="false" style="height: 160px;">
+
+                    <input (change)="onUpload($event)" class="filepond--browser" type="file" id="filepond--browser-sa0fr2ifz" name="filepond" aria-controls="filepond--assistant-sa0fr2ifz" aria-labelledby="filepond--drop-label-sa0fr2ifz" accept="image" multiple>
+
+                    <div class="filepond--drop-label" style="transform: translate3d(0px, 0px, 0px); opacity: 1;"><label for="filepond--browser-sa0fr2ifz" id="filepond--drop-label-sa0fr2ifz" aria-hidden="true"><div class="btn btn-primary mb-3"><i class="fi-cloud-upload me-1"></i>Upload photos / video</div><br>or drag them in</label></div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <button *ngFor="let image of images" type="button" class="btn btn-primary m-2">
+                      <i class="fi-image me-2"></i>
+                      {{image.name}}
+                    </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action buttons -->
+            <section class="d-sm-flex justify-content-between pt-2">
+                <button (click)="submitForm()" *ngIf="!submitted" [disabled]="nameModel.invalid || cityModel.invalid || streetModel.invalid || codeModel.invalid || priceModel.invalid || descriptionModel.invalid || images == 0" class="btn btn-primary btn-lg d-block mb-2">Save and continue</button>
+                <button *ngIf="submitted" type="button" class="btn btn-primary" disabled>
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                Submitting...
+              </button>
+            </section>
+        </div>
+        <!-- Progress of completion-->
+        <aside class="col-lg-3 offset-lg-1 d-none d-lg-block">
+            <div class="sticky-top pt-5">
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center">
+                        <i *ngIf="nameModel.valid" class="fi-check text-primary me-2"></i>
+                        <i *ngIf="nameModel.invalid" class="fi-check text-muted me-2"></i>
+                        <span class="nav-link fw-normal ps-1 p-0">Basic info</span></li>
+                    <li class="d-flex align-items-center">
+                        <i *ngIf="cityModel.valid && streetModel.valid && codeModel.valid" class="fi-check text-primary me-2"></i>
+                        <i *ngIf="cityModel.invalid || streetModel.invalid || codeModel.invalid" class="fi-check text-muted me-2"></i>
+                        <span class="nav-link fw-normal ps-1 p-0">Location</span></li>
+                    <li class="d-flex align-items-center">
+                        <i *ngIf="descriptionModel.valid" class="fi-check text-primary me-2"></i>
+                        <i *ngIf="descriptionModel.invalid" class="fi-check text-muted me-2"></i>
+                        <span class="nav-link fw-normal ps-1 p-0">Property Description</span></li>
+                    <li class="d-flex align-items-center">
+                        <i *ngIf="priceModel.valid" class="fi-check text-primary me-2"></i>
+                        <i *ngIf="priceModel.invalid" class="fi-check text-muted me-2"></i>
+                        <span class="nav-link fw-normal ps-1 p-0">Price</span></li>
+                    <li class="d-flex align-items-center">
+                        <i *ngIf="images.length > 0" class="fi-check text-primary me-2"></i>
+                        <i *ngIf="images.length == 0" class="fi-check text-muted me-2"></i>
+                        <span class="nav-link fw-normal ps-1 p-0">Photos</span></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div>

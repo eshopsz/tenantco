@@ -1,0 +1,359 @@
+<section class="container mt-5 mb-lg-5 mb-4 pt-5 pb-lg-5">
+    <!-- Breadcrumb-->
+    <nav class="mb-3 pt-md-3" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+            <li class="breadcrumb-item"><a [routerLink]="['/catalog']">Catalog</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{estate.title}}</li>
+        </ol>
+    </nav>
+    <div class="row gy-5 pt-lg-2">
+        <div class="col-lg-7">
+            <div class="d-flex flex-column">
+                <!-- Carousel with slides count-->
+                <div class="order-lg-1 order-2">
+                    <div class="tns-carousel-wrapper">
+
+                        <div class="tns-outer" id="tns1-ow">
+                            <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0">
+                                <button class="prev-btn" type="button" data-controls="prev" tabindex="-1" aria-controls="tns1"><i class="fi-chevron-left"></i></button>
+                                <button class="next-btn" type="button" data-controls="next" tabindex="-1" aria-controls="tns1"><i class="fi-chevron-right"></i></button>
+                            </div>
+                            <div id="tns1-mw" class="tns-ovh">
+                                <div class="tns-inner" id="tns1-iw">
+                                    <div class="tns-carousel-inner tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" id="tns1" style="transform: translate3d(-57.1429%, 0px, 0px);">
+                                        <div *ngIf="estate.images[0]" class="tns-item" id="tns1-item0" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[0].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[1]" class="tns-item" id="tns1-item1" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[1].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[2]" class="tns-item" id="tns1-item2" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[2].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[3]" class="tns-item" id="tns1-item3" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[3].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[4]" class="tns-item" id="tns1-item4" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[4].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[5]" class="tns-item" id="tns1-item5" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[5].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[6]" class="tns-item" id="tns1-item6" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[6].image}}" alt="Image"></div>
+                                        <div *ngIf="estate.images[7]" class="tns-item" id="tns1-item7" aria-hidden="true" tabindex="-1"><img class="rounded-3" src="http://127.0.0.1:8000{{estate.images[7].image}}" alt="Image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Thumbnails nav-->
+                    <ul class="tns-thumbnails mb-4" id="thumbnails" aria-label="Carousel Pagination">
+                        <li *ngIf="estate.images[0]" class="tns-thumbnail" data-nav="0" aria-label="Carousel Page 1" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[0].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[1]" class="tns-thumbnail" data-nav="1" aria-label="Carousel Page 2" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[1].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[2]" class="tns-thumbnail" data-nav="2" aria-label="Carousel Page 3" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[2].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[3]" class="tns-thumbnail" data-nav="3" aria-label="Carousel Page 4" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[3].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[4]" class="tns-thumbnail" data-nav="4" aria-label="Carousel Page 5" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[4].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[5]" class="tns-thumbnail" data-nav="5" aria-label="Carousel Page 6" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[5].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[6]" class="tns-thumbnail" data-nav="6" aria-label="Carousel Page 7" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[6].image}}" alt="Thumbnail"></li>
+                        <li *ngIf="estate.images[7]" class="tns-thumbnail" data-nav="7" aria-label="Carousel Page 8" aria-controls="tns1" tabindex="-1"><img src="http://127.0.0.1:8000{{estate.images[7].image}}" alt="Thumbnail"></li>
+                    </ul>
+                </div>
+                <!-- Page title + Features-->
+                <div class="order-lg-2 order-1">
+                    <h1 class="h2 mb-2">{{estate.title}}</h1>
+                    <p class="mb-2 pb-1 fs-lg">{{estate.province.province}}, {{estate.city}}, {{estate.street}}</p>
+                    <ul class="d-flex mb-4 pb-lg-2 list-unstyled">
+                        <li class="me-3 pe-3 border-end"><b class="me-1">{{estate.bedroom}}</b><i class="fi-bed mt-n1 lead align-middle text-muted"></i></li>
+                        <li class="me-3 pe-3 border-end"><b class="me-1">{{estate.bathroom}}</b><i class="fi-bath mt-n1 lead align-middle text-muted"></i></li>
+                        <li class="me-3 pe-3 border-end"><b class="me-1">{{estate.parking}}</b><i class="fi-car mt-n1 lead align-middle text-muted"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Overview-->
+            <h2 class="h5">Overview</h2>
+            <p class="mb-4 pb-2">
+                {{estate.description}}
+            </p>
+        </div>
+
+        <!-- Sidebar with details-->
+        <aside class="col-lg-5">
+            <div class="ps-lg-5">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div><span class="badge bg-info me-2 mb-2">New</span></div>
+                    <div class="text-nowrap">
+                        <button class="btn d-none btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button" data-bs-toggle="tooltip" aria-label="Add to Wishlist" data-bs-original-title="Add to Wishlist"><i class="fi-heart"></i></button>
+                        <div class="dropdown d-inline-block" data-bs-toggle="tooltip" data-bs-original-title="Share">
+                            <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" type="button" data-bs-toggle="dropdown"><i class="fi-share"></i></button>
+                            <div class="dropdown-menu dropdown-menu-end my-1">
+                                <button class="dropdown-item" type="button"><i class="fi-facebook fs-base opacity-75 me-2"></i>Facebook</button>
+                                <button class="dropdown-item" type="button"><i class="fi-twitter fs-base opacity-75 me-2"></i>Twitter</button>
+                                <button class="dropdown-item" type="button"><i class="fi-instagram fs-base opacity-75 me-2"></i>Instagram</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="h5 mb-2">Monthly rent:</h3>
+                <h2 class="h3 mb-4 pb-2">E{{estate.price}}<span class="d-inline-block ms-1 fs-base fw-normal text-body">/month</span></h2>
+                <!-- Property details-->
+                <div class="card border-0 bg-secondary mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-0 pb-3">Property Details</h5>
+                        <ul class="list-unstyled mt-n2 mb-0">
+                            <li class="mt-2 mb-0"><b>Type: </b>{{estate.estate_type.type}}</li>
+                            <li class="mt-2 mb-0"><b>Bedrooms: </b>{{estate.bedroom}}</li>
+                            <li class="mt-2 mb-0"><b>Bathrooms: </b>{{estate.bathroom}}</li>
+                            <li class="mt-2 mb-0"><b>Parking places: </b>{{estate.parking}}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Amenities-->
+                <div class="card border-0 bg-secondary mb-4">
+                    <div class="card-body">
+                        <h5>Extras</h5>
+                        <ul class="list-unstyled row row-cols-md-2 row-cols-1 gy-2 mb-0 text-nowrap">
+                            <li *ngFor="let extra of estate.extras" class="col"><i class="fi-wifi mt-n1 me-2 fs-lg align-middle"></i>{{extra.extra}}</li>
+                        </ul>
+                    </div>
+                    <a *ngIf="!paid" class="btn btn-lg btn-primary w-100 mb-3" href="#">Get Agent Details</a>
+                </div>
+
+                <div *ngIf="paid" class="card shadow-sm mb-4 pt-3">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start justify-content-between">
+                            <div class="text-decoration-none"><img class="rounded-circle mb-2" src="../../../assets/img/default.png" width="60" alt="Avatar">
+                                <h5 class="mb-1">{{estate.agent.first_name}} {{estate.agent.last_name}}</h5>
+                            </div>
+                            <div class="ms-4 flex-shrink-0 d-none">
+                                <a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" href="#"><i class="fi-facebook"></i></a>
+                                <a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2" href="#"><i class="fi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <ul class="list-unstyled border-bottom">
+                            <li><a class="nav-link fw-normal p-0" href="tel:{{estate.agent.phone}}"><i class="fi-phone mt-n1 me-2 align-middle opacity-60"></i>{{estate.agent.phone}}</a></li>
+                            <li><a class="nav-link fw-normal p-0" href="mailto:{{estate.agent.email}}"><i class="fi-mail mt-n1 me-2 align-middle opacity-60"></i>{{estate.agent.email}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Post meta-->
+                <ul class="d-flex mb-4 list-unstyled fs-sm">
+                    <li class="me-3 pe-3 border-end">Published: <b>{{estate.posted | date}}</b></li>
+                    <li class="me-3 pe-3 d-none">Views: <b>48</b></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="container mb-5 pb-2 pb-lg-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="h3 mb-0">Recently viewed</h2><a *ngIf="estates.length>10" class="btn btn-link fw-normal p-0" [routerLink]="['/catelog']">View all<i class="fi-arrow-long-right ms-2"></i></a>
+    </div>
+    <div class="tns-carousel-wrapper tns-controls-outside-xxl tns-nav-outside tns-nav-outside-flush mx-n2">
+        <div class="tns-outer" id="tns2-ow">
+            <div class="tns-controls" aria-label="Carousel Navigation" tabindex="0"><button type="button" data-controls="prev" tabindex="-1" aria-controls="tns2"><i class="fi-chevron-left"></i></button><button type="button" data-controls="next" tabindex="-1" aria-controls="tns2"><i class="fi-chevron-right"></i></button></div>
+            <div class="tns-liveregion tns-visually-hidden" aria-live="polite" aria-atomic="true">slide <span class="current">9</span> of 5</div>
+            <div id="tns2-mw" class="tns-ovh">
+                <div class="tns-inner" id="tns2-iw">
+                    <div class="tns-carousel-inner row gx-4 mx-0 pt-3 pb-4 recents tns-slider tns-carousel tns-subpixel tns-calc tns-horizontal" nid="tns2" style="transition-duration: 0s; transform: translate3d(-38.0952%, 0px, 0px);">
+
+                        <div *ngIf="estates[0]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[0].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[0].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[0].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[0].id]">{{estates[0].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[0].province.province}}, {{estates[0].city}}, {{estates[0].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[0].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[0].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[0].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[0].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div *ngIf="estates[1]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[1].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[1].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[1].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[1].id]">{{estates[1].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[1].province.province}}, {{estates[1].city}}, {{estates[1].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[1].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[1].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[1].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[1].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[2]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[2].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[2].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[2].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[2].id]">{{estates[2].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[2].province.province}}, {{estates[2].city}}, {{estates[2].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[2].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[2].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[2].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[2].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[3]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[3].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[3].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[3].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[3].id]">{{estates[3].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[3].province.province}}, {{estates[3].city}}, {{estates[3].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[3].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[3].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[3].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[3].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[4]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[4].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[4].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[4].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[4].id]">{{estates[4].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[4].province.province}}, {{estates[4].city}}, {{estates[4].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[4].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[4].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[4].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[4].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[5]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[5].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[5].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[5].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[5].id]">{{estates[5].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[5].province.province}}, {{estates[5].city}}, {{estates[5].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[5].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[5].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[5].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[5].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[6]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[6].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[6].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[6].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[6].id]">{{estates[6].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[6].province.province}}, {{estates[6].city}}, {{estates[6].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[6].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[6].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[6].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[6].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[7]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[7].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[7].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[7].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[7].id]">{{estates[7].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[7].province.province}}, {{estates[7].city}}, {{estates[7].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[7].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[7].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[7].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[7].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[8]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[8].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[8].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[8].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[8].id]">{{estates[8].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[8].province.province}}, {{estates[8].city}}, {{estates[8].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[8].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[8].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[8].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[8].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div *ngIf="estates[9]" class="col tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                            <div class="card shadow-sm card-hover border-0 h-100">
+                                <div class="card-img-top card-img-hover">
+                                    <a class="img-overlay" [routerLink]="['/catalog/estate', estates[9].id]"></a>
+                                    <img src="http://127.0.0.1:8000{{estates[9].images[0].image}}" alt="Image">
+                                </div>
+                                <div class="card-body position-relative pb-3">
+                                    <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">{{estates[9].category.category}}</h4>
+                                    <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" [routerLink]="['/catalog/estate', estates[9].id]">{{estates[9].title}} </a></h3>
+                                    <p class="mb-2 fs-sm text-muted">{{estates[9].province.province}}, {{estates[9].city}}, {{estates[9].street}}</p>
+                                    <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>R{{estates[9].price}}</div>
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap">
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[9].bedroom}}<i class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[9].bathroom}}<i class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                    <span class="d-inline-block mx-1 px-2 fs-sm">{{estates[9].parking}}<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

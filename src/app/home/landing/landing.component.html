@@ -1,0 +1,69 @@
+<section class="container-fluid my-5 pt-5 pb-lg-4 px-xxl-4">
+    <div class="card align-items-center justify-content-center border-0 p-md-5 p-4 bg-secondary overflow-hidden mt-n3" style="min-height: 65vh; background-image: url(&quot;../../../assets/img/real-estate/hero-image-v2.jpg&quot;); background-size:cover;"><span class="img-overlay opacity-40"></span>
+        <div class="content-overlay" style="max-width: 856px;">
+
+            <h1 class="display-5 mb-5 pb-md-3 px-md-3 text-white text-center">Easy way to find a perfect property</h1>
+            <form class="form-group d-block">
+                <div class="row g-0">
+                    <div class="col-md-10 d-sm-flex align-items-center">
+                        <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select">
+                            <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-home me-2"></i><span class="dropdown-toggle-label">{{type}}</span></button>
+                            <input type="hidden">
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let type of types">
+                                    <a class="dropdown-item" (click)="typeSelect(type.type)"><span class="dropdown-item-label">{{type.type}}</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="d-sm-none my-2">
+                        <div class="dropdown w-sm-50 border-end-sm" data-bs-toggle="select">
+                            <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown"><i class="fi-map-pin me-2"></i><span class="dropdown-toggle-label">{{province}}</span></button>
+                            <input type="hidden">
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let province of provinces">
+                                    <a class="dropdown-item" (click)="provinceSelect(province.province)"><span class="dropdown-item-label">{{province.province}}</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="d-sm-none my-2">
+                        <div class="dropdown w-sm-50" data-bs-toggle="select">
+                            <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-list me-2"></i><span class="dropdown-toggle-label">{{category}}</span></button>
+                            <input type="hidden">
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let category of categories">
+                                    <a class="dropdown-item" (click)="categorySelect(category.category)"><span class="dropdown-item-label">{{category.category}}</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="d-sm-none my-2">
+                        <div class="dropdown w-sm-50" data-bs-toggle="select">
+                            <button class="btn btn-lg btn-link dropdown-toggle ps-2 ps-sm-3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fi-list me-2"></i><span class="dropdown-toggle-label">{{price_range}}</span></button>
+                            <input type="hidden">
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" (click)="priceSelect('1k - 3k', 1000, 3000)"><span class="dropdown-item-label">1k - 3k</span></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" (click)="priceSelect('3k - 5k', 3000, 5000)"><span class="dropdown-item-label">3k - 5k</span></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" (click)="priceSelect('5k - 8k', 4000, 8000)"><span class="dropdown-item-label">5k - 8k</span></a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" (click)="priceSelect('8k +', 8000, 10000000000)"><span class="dropdown-item-label">8k +</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="d-md-none mt-2">
+                    <div class="col-md-2 d-sm-flex align-items-center pt-3 pt-md-0">
+                        <button (click)="search()" class="btn btn-lg btn-icon btn-primary px-3 w-100" type="button">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);">
+            <div></div>
+        </div>
+    </div>
+</section>
